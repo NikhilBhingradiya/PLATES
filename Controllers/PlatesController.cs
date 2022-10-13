@@ -54,7 +54,7 @@ namespace PLATES.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,size,color,weight,Price")] Plates plates)
+        public async Task<IActionResult> Create([Bind("Id,size,color,weight,Price, shape")] Plates plates)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace PLATES.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,size,color,weight,Price")] Plates plates)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,size,color,weight,Price, shape")] Plates plates)
         {
             if (id != plates.Id)
             {
