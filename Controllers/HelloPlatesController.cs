@@ -7,7 +7,7 @@ using System.Text.Encodings.Web;
 
 namespace PLATES.Controllers
 {
-    public class HelloWorldController : Controller
+    public class HelloPlatesController : Controller
     {
         // 
         // GET: /HelloWorld/
