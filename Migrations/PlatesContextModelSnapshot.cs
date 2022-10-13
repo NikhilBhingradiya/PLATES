@@ -39,7 +39,7 @@ namespace PLATES.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Movie");
+                    b.ToTable("Plates");
                 });
 #pragma warning restore 612, 618
         }
