@@ -16,7 +16,7 @@ namespace PLATES.Data
             {
 
             }
-            public DbSet<Plates> Movie { get; set; }
+            public DbSet<Plates> Plates { get; set; }
         }
     
 }

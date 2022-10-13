@@ -37,6 +37,9 @@ namespace PLATES.Migrations
                     b.Property<int>("weight")
                         .HasColumnType("int");
 
+                    b.Property<int>("shape")
+                        .HasColumnType("spring");
+
                     b.HasKey("Id");
 
                     b.ToTable("Plates");

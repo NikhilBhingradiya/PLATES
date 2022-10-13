@@ -22,7 +22,7 @@ namespace PLATES.Controllers
         // GET: Plates
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Movie.ToListAsync());
+            return View(await _context.Plates.ToListAsync());
         }
 
         // GET: Plates/Details/5
@@ -33,7 +33,7 @@ namespace PLATES.Controllers
                 return NotFound();
             }
 
-            var plates = await _context.Movie
+            var plates = await _context.Plates
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (plates == null)
             {
@@ -73,7 +73,7 @@ namespace PLATES.Controllers
                 return NotFound();
             }
 
-            var plates = await _context.Movie.FindAsync(id);
+            var plates = await _context.Plates.FindAsync(id);
             if (plates == null)
             {
                 return NotFound();
@@ -124,7 +124,7 @@ namespace PLATES.Controllers
                 return NotFound();
             }
 
-            var plates = await _context.Movie
+            var plates = await _context.Plates
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (plates == null)
             {
@@ -139,15 +139,15 @@ namespace PLATES.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var plates = await _context.Movie.FindAsync(id);
-            _context.Movie.Remove(plates);
+            var plates = await _context.Plates.FindAsync(id);
+            _context.Plates.Remove(plates);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool PlatesExists(int id)
         {
-            return _context.Movie.Any(e => e.Id == id);
+            return _context.Plates.Any(e => e.Id == id);
         }
     }
 }

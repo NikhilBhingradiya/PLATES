@@ -16,5 +16,8 @@ namespace PLATES.Models
         public int weight { get; set; }
 
         public decimal Price { get; set; }
+
+        public string shape { get; set; }
+
     }
 }
