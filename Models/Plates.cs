@@ -19,5 +19,7 @@ namespace PLATES.Models
 
         public string shape { get; set; }
 
+        public int Rating { get; set; }
+
     }
 }

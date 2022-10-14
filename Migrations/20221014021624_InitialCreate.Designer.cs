@@ -9,7 +9,7 @@ using PLATES.Data;
 namespace PLATES.Migrations
 {
     [DbContext(typeof(PlatesContext))]
-    [Migration("20221013203709_InitialCreate")]
+    [Migration("20221014021624_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,7 +30,13 @@ namespace PLATES.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
                     b.Property<string>("color")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("shape")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("size")
@@ -41,7 +47,7 @@ namespace PLATES.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Movie");
+                    b.ToTable("Plates");
                 });
 #pragma warning restore 612, 618
         }

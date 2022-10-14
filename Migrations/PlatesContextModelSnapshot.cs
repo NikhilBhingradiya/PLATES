@@ -28,7 +28,13 @@ namespace PLATES.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
                     b.Property<string>("color")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("shape")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("size")
@@ -36,9 +42,6 @@ namespace PLATES.Migrations
 
                     b.Property<int>("weight")
                         .HasColumnType("int");
-
-                    b.Property<int>("shape")
-                        .HasColumnType("spring");
 
                     b.HasKey("Id");
 

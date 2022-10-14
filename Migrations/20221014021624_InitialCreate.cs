@@ -16,7 +16,8 @@ namespace PLATES.Migrations
                     color = table.Column<string>(nullable: true),
                     weight = table.Column<int>(nullable: false),
                     Price = table.Column<decimal>(nullable: false),
-                     shape = table.Column<string>(nullable: false)
+                    shape = table.Column<string>(nullable: true),
+                    Rating = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
