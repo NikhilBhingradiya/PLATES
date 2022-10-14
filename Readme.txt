@@ -20,3 +20,5 @@ creating the readme fille.
 create a database context class in Plates
 After I am running the scaffold in my app
 which help me creating the Create, Read, Update and Delete(CRUD)
+14-10-2022
+//My table wiil craete and shows data in my pc but when i came clg and i am trying to do clg pc it shows an eroor 
